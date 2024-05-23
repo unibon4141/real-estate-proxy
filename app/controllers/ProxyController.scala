@@ -8,7 +8,7 @@ import scala.concurrent.{ExecutionContext, Future}
 import scala.concurrent.duration.DurationInt
 
 @Singleton
-class HomeController @Inject()(val controllerComponents: ControllerComponents, val ws: WSClient, val config: Configuration)(implicit ec: ExecutionContext) extends BaseController {
+class ProxyController @Inject()(val controllerComponents: ControllerComponents, val ws: WSClient, val config: Configuration)(implicit ec: ExecutionContext) extends BaseController {
 
   def proxy(path: String, qNames: List[String], qVals: List[String]): Action[AnyContent] = Action.async {
     implicit request: Request[AnyContent] =>

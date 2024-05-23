@@ -1,3 +1,1 @@
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
-
-GET    /proxy/                     controllers.HomeController.proxy(path: String, qNames: List[String], qVals: List[String])
+GET    /proxy/                     controllers.ProxyController.proxy(path: String, qNames: List[String], qVals: List[String])
